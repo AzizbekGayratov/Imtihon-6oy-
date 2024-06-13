@@ -9,7 +9,7 @@ import {
     redirect
 } from './utils.js';
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const hasToken = checkToken();
     if (hasToken) {
         redirect('/index.html');
