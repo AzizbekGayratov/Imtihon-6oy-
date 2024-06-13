@@ -444,6 +444,10 @@ body {
   height: 100%;
 }
 
+.login{
+  width: 320px;
+}
+
 .admin__input__block {
   display: -webkit-box;
   display: -ms-flexbox;
