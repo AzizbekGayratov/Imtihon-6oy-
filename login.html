@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <div class="login">
+                <div class="login__block">
+                    <div class="login__title__box">
+                        <a href="./login.html" class="login__logo__block">
+                            <h1 class="login__logo">Login page</h1>
+                        </a>
+                        <p class="login__cap">Log in</p>
+                    </div>
+                    <form class="login__form">
+                        <div class="login__input__block">
+                            <label for="emailAddress">Email address</label>
+                            <input type="text" id="emailAddress" name="emailAddress" required>
+                        </div>
+                        <div class="login__input__block" id="password_visibility">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <button class="visibility__btn">
+                            </button>
+                        </div>
+                        <button class="login__btn" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="../src/scripts/js/login.js"></script>
+</body>
+
+</html>

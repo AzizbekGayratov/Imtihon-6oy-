@@ -1,0 +1,26 @@
+.header {
+    border-bottom: 1px solid $list_item_color;
+    padding: 8px 0;
+}
+
+.header__title {
+    font-family: 'Pacifico', cursive;
+    color: rgb(69, 68, 68);
+    font-size: 1.6rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.header__btn {
+    @include btn;
+}

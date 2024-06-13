@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="tools">
+        <div class="modal">
+            <div class="modal__block">
+                <button class="modal__close">X</button>
+                <div class="modal__content">
+                    <form class="modal__form">
+                        <div class="admin__input__block">
+                            <label for="editTitle">Title</label>
+                            <input type="text" id="editTitle" name="editTitle" required>
+                        </div>
+                        <div class="admin__input__block">
+                            <label for="editPrice">Price</label>
+                            <input type="text" id="editPrice" name="editPrice" required>
+                        </div>
+                        <div class="admin__input__block">
+                            <label for="editDes">Description</label>
+                            <textarea name="editDes" id="editDes" minlength="10" rows="2" required></textarea>
+                        </div>
+                        <button id="editBtn" class="admin__btn" type="submit">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="root">
+        <header class="header">
+            <div class="container">
+                <div class="header__block">
+                    <a href="./index.html" class="header__logo__block">
+                        <h1 class="header__title">Admin panel</h1>
+                    </a>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link"></a>
+                        </li>
+                    </ul>
+                    <button class="header__btn">Log Out</button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <div class="main__block">
+                    <aside class="main__aside">
+                        <form class="admin__form">
+                            <div class="admin__input__block">
+                                <label for="title">Title</label>
+                                <input type="text" id="title" name="title" required>
+                            </div>
+                            <div class="admin__input__block">
+                                <label for="price">Price</label>
+                                <input type="text" id="price" name="price" required>
+                            </div>
+                            <div class="admin__input__block">
+                                <label for="des">Description</label>
+                                <textarea name="des" id="des" minlength="5" rows="2" required></textarea>
+                            </div>
+                            <button class="admin__btn" type="submit">Submit</button>
+                        </form>
+                    </aside>
+                    <div class="main__list__box">
+                        <ul class="main__list"></ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__block">
+                    <p class="footer__text">© All rights reserved.</p>
+                    <span class="footer__cap">Terms of Service</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="./src/scripts/main.js"></script>
+    <script type="module" src="./src/scripts/js/form.js"></script>
+</body>
+
+</html>

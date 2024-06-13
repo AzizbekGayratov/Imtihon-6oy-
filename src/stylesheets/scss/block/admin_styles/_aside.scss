@@ -1,0 +1,82 @@
+.main__aside {
+    width: 350px;
+    padding: 50px 25px;
+    border-right: 1px solid $list_item_color;
+    height: 100%;
+}
+
+.admin__input__block {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    label {
+        @include admin_form_label;
+        margin-bottom: 4px;
+    }
+
+
+
+}
+
+.admin__form {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+
+    input,
+    textarea {
+        @include admin_form_input;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $focused_input;
+        }
+    }
+
+    textarea {
+        overflow: hidden;
+    }
+}
+
+.admin__btn {
+    margin-top: 60px;
+    @include btn;
+}
+
+@media screen and (max-width: 800px) {
+    .main__aside {
+        width: 280px;
+        padding: 35px 10px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .main__block {
+        padding-top: 25px;
+    }
+
+    .main__aside {
+        width: 100%;
+        padding: 0 60px;
+        border-right: none;
+    }
+
+    .admin__input__block {
+        margin: 0;
+    }
+
+    .admin__btn {
+        margin-top: 20px;
+    }
+
+    .admin__form {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .main__aside {
+        padding: 0 20px;
+    }
+}

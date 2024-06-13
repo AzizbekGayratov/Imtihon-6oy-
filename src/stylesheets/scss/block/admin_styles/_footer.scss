@@ -1,0 +1,22 @@
+.footer {
+    background-color: $gray;
+
+    &__block {
+        padding: 0.7rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem;
+    }
+
+    &__cap {
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7rem;
+    }
+}
