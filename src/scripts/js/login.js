@@ -9,7 +9,7 @@ import {
     redirect
 } from './utils.js';
 
-window.location.reload();
+
 const hasToken = checkToken();
 console.log(hasToken);
 if (hasToken) {
