@@ -22,8 +22,13 @@ const card_price = (price) => {
     return str
 }
 
+window.addEventListener('load', () => {
+    titleInput.focus();  
+})
+
 form.onsubmit = () => {
     const data = {
+        id: Date.now(),
         title: titleInput.value,
         price: card_price(priceInput.value),
         des: desInput.value

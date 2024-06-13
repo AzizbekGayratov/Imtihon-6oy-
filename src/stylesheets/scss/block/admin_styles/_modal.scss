@@ -48,6 +48,38 @@
     }
 }
 
+
+.loader_box {
+    display: none;
+
+    .loader__block {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .loader {
+        border: 32px solid #72d2fe;
+        border-top: 38px solid #0092f4;
+        border-radius: 50%;
+        width: 220px;
+        height: 220px;
+        animation: spin 1.35s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+}
+
 .modal__block {
     border-radius: 8px 0 12px 12px;
     width: 600px;

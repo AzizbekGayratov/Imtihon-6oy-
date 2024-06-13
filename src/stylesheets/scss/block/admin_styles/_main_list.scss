@@ -38,7 +38,8 @@
 }
 
 .main__card {
-    max-width: 320px;
+    outline: none;
+    // max-width: 320px;
     background-color: $list_item_color;
     border-radius: 10px;
     padding: 20px;

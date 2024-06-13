@@ -2,12 +2,26 @@ const email_input = document.getElementById('emailAddress');
 const password_input = document.getElementById('password');
 const login_form = document.forms[0];
 const visibility__btn = document.querySelector('.visibility__btn');
+const loader = document.querySelector('.loader_box');
 
 import {
     checkToken,
     redirect
 } from './utils.js';
 
+const hasToken = checkToken();
+if (hasToken) {
+    redirect('/index.html');
+}
+
+
+// Bu kod yozilgan ishlatilganda email va parol avtomatik kiritiladi
+// window.addEventListener('load', () => {
+//     email_input.value = "john@mail.com";
+//     password_input.value = "changeme";
+//     console.log(access);
+//     console.log(email_input.value, password_input.value);
+// })
 
 let visibility = false;
 visibility__btn.onclick = (e) => {
@@ -39,20 +53,18 @@ login_form.onsubmit = (e) => {
     e.preventDefault();
     console.log(creadentials);
 
-    const access = {
-        title: 'john@mail',
-        password: 'changeme'
-    }
-    if (creadentials.title === access.title && creadentials.password === access.password) {
+    if (creadentials.email == "john@mail.com" && creadentials.password == "changeme") {
         login()
     } else {
-        alert('Login yoki parol noto`g`ri!')
+        alert('Email yoki parol noto`g`ri')
     }
 }
 
 
 const login = async () => {
     try {
+        loader.style.display = 'block';
+
         const url = 'https://api.escuelajs.co/api/v1/auth/login';
         const response = await fetch(url, {
             method: 'POST',
@@ -75,5 +87,7 @@ const login = async () => {
         }
     } catch (error) {
         console.log(error);
+    } finally {
+        loader.style.display = 'none';
     }
 }

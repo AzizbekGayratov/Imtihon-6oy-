@@ -314,7 +314,7 @@ body {
 }
 
 .main__card {
-  max-width: 320px;
+  outline: none;
   background-color: #e4e1e1;
   border-radius: 10px;
   padding: 20px;
@@ -626,6 +626,51 @@ body {
 .modal__form textarea:focus {
   outline: none;
   border-bottom: 2px solid rgb(0, 119, 255);
+}
+
+.loader_box {
+  display: none;
+}
+.loader_box .loader__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.loader_box .loader {
+  border: 32px solid #72d2fe;
+  border-top: 38px solid #0092f4;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  -webkit-animation: spin 1.35s linear infinite;
+          animation: spin 1.35s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .modal__block {
