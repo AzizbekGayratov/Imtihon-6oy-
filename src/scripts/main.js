@@ -64,6 +64,7 @@ const deleteProduct = (id) => {
 
 
 const render = (data) => {
+    products_box.innerHTML = "";
     data.map((item) => {
         const card = document.createElement('li');
         card.classList.add('main__item');
@@ -93,18 +94,41 @@ const render = (data) => {
             modal.style.display = 'flex';
             modal_title.focus()
 
+
+
             // modal inputs values 
             modal_title.value = item.title
             modal_price.value = item.price
             modal_des.value = item.des
-        }
-        // modal form submit process
-        modal_form.onsubmit = (e) => {
-            e.preventDefault();
-            if (confirm('Save this changes?')) {
-                // type code here
-                // for edit product
-                modal.style.display = 'none';
+
+
+            // modal form submit process
+            modal_form.onsubmit = (e) => {
+                e.preventDefault();
+                const newData = {
+                    id: item.id,
+                    title: modal_title.value,
+                    price: cardPrice(modal_price.value),
+                    des: modal_des.value
+                }
+                if (confirm('Save this changes?')) {
+                    console.log(newData);
+                    
+                    const products = JSON.parse(localStorage.getItem('examProducts'));
+                    const newProducts = [];
+                    products.map((product) => {
+                        if (product.id === item.id) {
+                            newProducts.push(newData)
+                        } else {
+                            newProducts.push(product)
+                        }
+                    });
+                    localStorage.setItem('examProducts', JSON.stringify(newProducts));
+
+                    modal.style.display = 'none';
+                    window.location.reload();
+                    // getData();
+                }
             }
         }
 
