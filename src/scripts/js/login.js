@@ -10,13 +10,11 @@ import {
 } from './utils.js';
 
 window.location.reload();
-window.addEventListener('DOMContentLoaded', () => {
-    const hasToken = checkToken();
-    console.log(hasToken);
-    if (hasToken) {
-        redirect('/index.html');
-    }
-})
+const hasToken = checkToken();
+console.log(hasToken);
+if (hasToken) {
+    redirect('/index.html');
+}
 
 
 // Bu kod yozilgan ishlatilganda email va parol avtomatik kiritiladi
