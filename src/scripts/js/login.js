@@ -9,8 +9,10 @@ import {
     redirect
 } from './utils.js';
 
+window.location.reload();
 window.addEventListener('DOMContentLoaded', () => {
     const hasToken = checkToken();
+    console.log(hasToken);
     if (hasToken) {
         redirect('/index.html');
     }
