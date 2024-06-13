@@ -9,10 +9,12 @@ import {
     redirect
 } from './utils.js';
 
-const hasToken = checkToken();
-if (hasToken) {
-    redirect('/index.html');
-}
+window.addEventListener('load', () => {
+    const hasToken = checkToken();
+    if (hasToken) {
+        redirect('/index.html');
+    }
+})
 
 
 // Bu kod yozilgan ishlatilganda email va parol avtomatik kiritiladi
